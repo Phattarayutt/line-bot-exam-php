@@ -1,4 +1,6 @@
- $accessToken = "UO6G7Y2b4ncvobT97WFaVxtqIunHXejnEcd2Fsltb++EunycZH2bgnp8u/4O1AxMduis8Ci2cf6s3+nRkkZ/2Yvck+q6JP4pYDEl8CdtUyYDqMA/6m5B/qGNR8IEtdO4lyn0uA1VWBJZUPCAkS2wJgdB04t89/1O/w1cDnyilFU=";//copy ข้อความ Channel access token ตอนที่ตั้งค่า
+<?php 
+
+$accessToken = "UO6G7Y2b4ncvobT97WFaVxtqIunHXejnEcd2Fsltb++EunycZH2bgnp8u/4O1AxMduis8Ci2cf6s3+nRkkZ/2Yvck+q6JP4pYDEl8CdtUyYDqMA/6m5B/qGNR8IEtdO4lyn0uA1VWBJZUPCAkS2wJgdB04t89/1O/w1cDnyilFU=";//copy ข้อความ Channel access token ตอนที่ตั้งค่า
    $content = file_get_contents('php://input');
    $arrayJson = json_decode($content, true);
    $arrayHeader = array();
