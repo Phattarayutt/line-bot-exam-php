@@ -14,8 +14,27 @@
    $arrayPostData['messages'][0]['type'] = "text";
    $arrayPostData['messages'][0]['text'] = "Hello"; 
    
-   pushMsg($arrayHeader,$arrayPostData);
+   //pushMsg($arrayHeader,$arrayPostData);
     
+$ch = curl_init();
+
+curl_setopt($ch, CURLOPT_URL, 'https://api.line.me/bot/pnp/push/verified');
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_POSTFIELDS, "{ \"to\":\t\"055d88d47226f390a5d6e7bbd996c38c9629522778704be6cbdc56c3d568080b\", \"messages\":\t[ { \"type\":\"text\", \"text\":\"Hello,\tworld1\" } ] }");
+curl_setopt($ch, CURLOPT_POST, 1);
+
+$headers = array();
+$headers[] = 'Authorization: Bearer	{vJZew/1WKkbayG4Cj0X9p/To6gcTOFPhSfYKL8jsAxWHaVip1mgTdYpw5DG7BpIpUbQX5/yA20gmrjAvk7ZJqiJnHwjHGImzFX7qMmt8klny2DgeU4vV5R26DFlu2Rltv8AErV26tU3/uURt221gfQFIS9xybk1bpjJUhI9NTk0=}';
+$headers[] = 'Content-Type: application/json';
+curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+
+$result = curl_exec($ch);
+if (curl_errno($ch)) {
+    echo 'Error:' . curl_error($ch);
+}
+curl_close($ch);
+
+
    function pushMsg($arrayHeader,$arrayPostData){
       $strUrl = "https://api.line.me/bot/pnp/push/verified";
       $ch = curl_init();
