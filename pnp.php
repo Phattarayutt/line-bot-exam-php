@@ -8,11 +8,11 @@
  
 
 
-   $phone_number = hash('sha256', '0859556678' ) ; 
+   $phone_number = hash('sha256', '+66859556678' ) ; 
  
  
    
-$arrayPostData['to'] =  "055d88d47226f390a5d6e7bbd996c38c9629522778704be6cbdc56c3d568080b" ;
+$arrayPostData['to'] =  $phone_number  ;
    $arrayPostData['messages'][0]['type'] = "text";
    $arrayPostData['messages'][0]['text'] = "Hello"; 
    
