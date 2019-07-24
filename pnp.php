@@ -26,7 +26,7 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 1);
 
 $headers = array();
-$headers[] = 'Authorization: Bearer	{vJZew/1WKkbayG4Cj0X9p/To6gcTOFPhSfYKL8jsAxWHaVip1mgTdYpw5DG7BpIpUbQX5/yA20gmrjAvk7ZJqiJnHwjHGImzFX7qMmt8klny2DgeU4vV5R26DFlu2Rltv8AErV26tU3/uURt221gfQFIS9xybk1bpjJUhI9NTk0=}';
+$headers[] =  "Authorization: Bearer {$accessToken}" ;
 $headers[] = 'Content-Type: application/json';
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
