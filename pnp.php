@@ -33,7 +33,7 @@ if (curl_errno($ch)) {
     echo 'Error:' . curl_error($ch);
 }
 curl_close($ch);
-
+echo $result;
 
    function pushMsg($arrayHeader,$arrayPostData){
       $strUrl = "https://api.line.me/bot/pnp/push/verified";
