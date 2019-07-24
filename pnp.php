@@ -10,7 +10,7 @@
 
    $phone_number = hash('sha256', '0859556678' ) ; 
    
-   $arrayPostData['to'] =  $phone_number ;
+   $arrayPostData['to'] =  "055d88d47226f390a5d6e7bbd996c38c9629522778704be6cbdc56c3d568080b" ;
    $arrayPostData['messages'][0]['type'] = "text";
    $arrayPostData['messages'][0]['text'] = "Hello"; 
    
@@ -20,7 +20,7 @@ $ch = curl_init();
 
 curl_setopt($ch, CURLOPT_URL, 'https://api.line.me/bot/pnp/push/verified');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt($ch, CURLOPT_POSTFIELDS, "{ \"to\":\t\"055d88d47226f390a5d6e7bbd996c38c9629522778704be6cbdc56c3d568080b\", \"messages\":\t[ { \"type\":\"text\", \"text\":\"Hello,\tworld1\" } ] }");
+curl_setopt($ch, CURLOPT_POSTFIELDS,  json_encode($arrayPostData) );
 curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 1);
