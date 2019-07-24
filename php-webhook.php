@@ -6,8 +6,8 @@
    $arrayHeader[] = "Content-Type: application/json";
    $arrayHeader[] = "Authorization: Bearer {$accessToken}";
    //รับข้อความจากผู้ใช้
-   $id = $arrayJson['events'][0]['userId'] ;
-   
+ 
+    $id = $arrayJson['events'][0]['source']['userId'];
    $arrayPostData['to'] = $id;
    $arrayPostData['messages'][0]['type'] = "text";
    $arrayPostData['messages'][0]['text'] = "push success";
