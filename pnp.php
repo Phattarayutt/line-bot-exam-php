@@ -6,7 +6,9 @@
    $arrayHeader[] = "Content-Type: application/json";
    $arrayHeader[] = "Authorization: Bearer {$accessToken}";
  
-   $phone_number = '0859556678'; 
+
+
+   $phone_number = hash('sha256', '0859556678']) ; 
    
    $arrayPostData['to'] =  $phone_number ;
    $arrayPostData['messages'][0]['type'] = "text";
