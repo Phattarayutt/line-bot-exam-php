@@ -14,7 +14,7 @@
    
 $arrayPostData['to'] =  $phone_number  ;
    $arrayPostData['messages'][0]['type'] = "text";
-   $arrayPostData['messages'][0]['text'] = "Hello"; 
+   $arrayPostData['messages'][0]['text'] = "Welcome to Phone Number Push"; 
    
    //pushMsg($arrayHeader,$arrayPostData);
     
