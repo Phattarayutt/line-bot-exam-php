@@ -11,7 +11,7 @@
    $arrayPostData['to'] = $id;
    $arrayPostData['messages'][0]['type'] = "text";
    $arrayPostData['messages'][0]['text'] = "push success";
-    pushMsg($arrayHeader,$arrayPostData);
+    //pushMsg($arrayHeader,$arrayPostData);
    function pushMsg($arrayHeader,$arrayPostData){
       $strUrl = "https://api.line.me/v2/bot/message/push";
       $ch = curl_init();
