@@ -19,11 +19,19 @@
         });
         Instascan.Camera.getCameras().then(cameras => 
         {
-            if(cameras.length > 0){
-                scanner.start(cameras[0]);
-            } else {
-                console.error("Não existe câmera no dispositivo!");
-            }
+            if (cameras.length > 0) {
+    var selectedCam = cameras[0];
+    $.each(cameras, (i, c) => {
+        if (c.name.indexOf('back') != -1) {
+            selectedCam = c;
+            return false;
+        }
+    });
+
+    scanner.start(selectedCam);
+} else {
+    console.error('No cameras found.');
+}
         });
     </script>
 
