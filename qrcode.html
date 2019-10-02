@@ -20,20 +20,22 @@
         Instascan.Camera.getCameras().then(cameras => 
         {
             if (cameras.length > 0) {
-    var selectedCam = cameras[0];
-    $.each(cameras, (i, c) => {
-        if (c.name.indexOf('back') != -1) {
-            selectedCam = c;
-            return false;
-        }
-    });
+               var selectedCam = cameras[0];
+               $.each(cameras, (i, c) => {
+                  if (c.name.indexOf('back') != -1) {
+                    selectedCam = c;
+                     return false;
+                   }  
+              });
 
-    scanner.start(selectedCam);
-} else {
-    console.error('No cameras found.');
-}
-        });
+            scanner.start(selectedCam);
+       } 
+          else 
+       {
+           console.error('No cameras found.');
+       }
+       });
     </script>
-
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" ></script>	
  </body>
 </html>
